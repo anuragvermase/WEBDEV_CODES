@@ -1,0 +1,8 @@
+Everything in js is executed in "Execution Context"
+
+having two blocks:
+1. code block- have all the code written  
+2. memory block- executes the code line by line.
+
+-> JS is single threaded programming language
+-> JS is synchronous
