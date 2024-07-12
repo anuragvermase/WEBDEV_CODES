@@ -1,0 +1,72 @@
+<!--Dom- document object model -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 1</title>
+</head>
+<body>
+    
+    <!-- id -->
+    <p id="one"> <span>Hello</span> Namaste</p>
+
+    <!-- class -->
+    <ul>
+        <li class="tech">One</li>
+        <li class="tech">Two</li>
+        <li class="tech">Three</li>
+    </ul>
+
+    <!-- Tag Name -->
+    <h4>Hey</h4>
+    <h4>Namaste</h4>
+    <h4>Hola</h4>
+
+    <!-- Query selector -->
+    <h2>Hello</h2>
+    <h2 class="classs">Hola</h2>
+    <h2 id="ids">Hey</h2>
+    
+
+    <!--Script File-->
+    <script>
+
+        //id
+        let var1 = document.getElementById("one"); // to select an id 
+        console.log(var1); // to see whole element
+        console.log(var1.innerHTML); // to see inner html of it
+        console.log(var1.innerText); // to see only the text of inside of element
+
+        //class
+        let var2 = document.getElementsByClassName("tech"); //select the class from an element
+        console.log(var2); //showing the collection of class
+        console.log(var2[2].innerHTML); //showing the element place at 2nd index - "three"
+        var2[1].innerText="NodeJs" //manipulating the innertext of an element
+        console.log(var2[1].innerText); //showing thechnged text from "two to NodeJs"
+
+        //TagName
+        let var3 = document.getElementsByTagName("h4");
+        console.log(var3[1].innerHTML); //selecting the 1st index of element - "Namaste"
+        var3[2].innerText = "Hello Anurag"; //manipulating the inner text of html
+        console.log(var3[2].innerHTML);
+        var3[2].style.color = "red"; // manipulate the css of element in document
+
+        //Query Selector
+        let var4 = document.querySelector(".classs"); //select by class
+        console.log(var4.innerHTML); // showing the text/html associated with class-"classs"
+        let var5 = document.querySelector("#ids"); //select by id
+        console.log(var5.innerHTML);// showing the text/html associated with id-"ids"
+        let var6 = document.querySelector("h2"); // select by tag name
+        console.log(var6.innerHTML); //showing the text/html associated with Tag name
+        var4.className="helllo"; // manipulating the class name to "hello"
+        console.log(var4);// showing the changed class
+        var4.classList="hello hola hi";//manipulate the classList.
+        console.log(var4);//showing the changed class
+        var4.setAttribute("title","anurag"); // adding attributes to HTML. title="anurag"
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background changer </title>
+    <!-- Styles -->
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            justify-content: center;
+            align-items:center;
+            display: flex;
+        }
+        #btn{
+            color: black;
+            background-color: rgb(102, 174, 194);
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 12px;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- creating button -->
+    <button id="btn">Click Here! to Change the Color</button>
+
+    <!-- JavaScript started -->
+    <script>
+
+        // select the button by its Id-"btn"
+        const clickButton= document.getElementById("btn");
+        //arror function for random color change function
+        const randomColor = ()=>{
+            let num ="0123456789ABCDEF";
+            let cons="#";
+
+            // loop for getting the hex-color code #(six digit code)
+            for( let i=0;i<6;i++){
+                cons=cons+num[Math.floor(Math.random()*16)];
+            
+            }
+            return cons;
+        };
+
+        //function call
+        console.log(randomColor());
+
+        // function that assign the randonColor()funtion to body of document
+        function colorChanger(){
+            document.body.style.background=randomColor();
+        }
+
+        // add eventListner- to click on button, color of background of the bady get changed everytime
+        clickButton.addEventListener("click",colorChanger);
+    </script>
+
+</body>
+</html>

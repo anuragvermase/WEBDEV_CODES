@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Child and Remove Child</title>
+</head>
+<body>
+    
+    <!-- content that removes from the document body -->
+    <h1>Removing HTML ELEMENT</h1>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+
+    <script>
+
+        //Create
+        let title = document.createElement("h1");//creating element in document
+        title.className="title";//giving class name
+        title.style.fontSize="24px"; //giving style-font size.
+        title.textContent="CREATING HTML ELEMENT";// insert content to document
+        document.body.appendChild(title);//add content to body of document
+
+        //Removing
+        const ul = document.querySelector("ul");//selecting the ul tag
+        console.log(ul);//print on console- the ul tag
+        const lists = document.querySelectorAll("li");//select all li and allot to lists
+        for(list of lists){
+            ul.removeChild(list);
+        }
+
+    </script>
+</body>
+</html>
